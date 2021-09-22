@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偏移和溢出</title>
+  <style>
+    /* 偏移
+      只要margin: auto; 在，内容块将垂直居中，top, left, bottom, right 可以设置偏移。 */
+    .box1 {
+      width: 10%;
+      height: 10%;
+      margin: auto;
+      overflow: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      background-color: pink;
+    }
+
+    /* 溢出
+      居中内容比父容器高时，防止溢出，加 overflow: auto （没有任何 padding 时，也可以加 max-height: 100%;） */
+    .box2 {
+      width: 10%;
+      height: 20px;
+      max-height: 100%;
+      margin: auto;
+      overflow: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+
+</html>

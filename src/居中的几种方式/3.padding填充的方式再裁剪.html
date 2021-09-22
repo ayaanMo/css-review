@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>padding填充的方式再裁剪</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .box_child {
+      width: 100px;
+      height: 100px;
+      padding: 50px;
+      /* 
+        border-box 背景被裁剪到边框盒
+        padding-box 背景被裁剪到内边距框
+        content-box 背景被裁剪到内容框
+      */
+      background-clip: content-box;
+      background-color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="box_child"></div>
+  </div>
+</body>
+
+</html>
